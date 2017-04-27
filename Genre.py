@@ -41,7 +41,7 @@ for tv in tv_shows:
 		tv_genre = []
 		for x in y:
 			if x not in genre_list:
-				f2.write(str(x))
+				f2.write(str(x) + '\n')
 				continue
 			else:
 				tv_genre.append(genre_list[x])
