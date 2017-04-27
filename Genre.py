@@ -45,6 +45,20 @@ for tv in tv_shows:
 				continue
 			else:
 				tv_genre.append(genre_list[x])
+				if len(tv_genre) == 0:
+					print("NO GENRE")
+					for tv in tv_shows:
+						response = search.movie(query=tv)
+						time.sleep(.33)
+						for s in search.results:
+							y=s['genre_ids']
+							for x in y:
+								if x not in genre_list:
+									f2.write(str(x) + '\n')
+									continue
+								else:	
+									tv_genre.append(genre_list[x])
+									print('This was from the Movie Database') 	
 		final = s['name'],tv_genre
 		print(final)
 		f1.write(str(final) + '\n')
