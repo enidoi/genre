@@ -4,7 +4,6 @@ import pandas as pd
 import time as time
 import os
 
-#tmdb.API_KEY = '2a162a940a4f88356efc90df803f5e28'
 KEY = os.environ['TMDB_API']
 tmdb.API_KEY = str(KEY)
 
